@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>iTX — Gestão de Equipas</title>
+  <meta name="description" content="Cria e gere a tua equipa de triathlon com o iTX. Acompanha métricas, rankings e progresso de cada atleta."/>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+
+<nav class="navbar scrolled" id="navbar">
+  <div class="container">
+    <a href="index.html" class="nav-logo">iTX</a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="dashboard.html">Dashboard</a></li>
+      <li><a href="teams.html" class="active">Equipas</a></li>
+      <li><a href="download.html">Download</a></li>
+    </ul>
+    <a href="download.html" class="nav-cta">Download App</a>
+    <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<section class="page-hero">
+  <div class="hero-glow hero-glow-2"></div>
+  <div class="container">
+    <div class="page-hero-content">
+      <span class="section-tag">Equipas</span>
+      <h1>Lidera. Monitoriza.<br/><span class="gradient">Conquista.</span></h1>
+      <p>Cria a tua equipa, adiciona atletas e acompanha o progresso de todos num só lugar.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-padded" style="padding-top:40px;">
+  <div class="container">
+
+
+
+    <!-- TEAMS LIST -->
+    <h3 class="teams-section-title reveal">As Tuas Equipas</h3>
+
+    <div class="teams-list">
+      <!-- TEAM 1 -->
+      <div class="team-card-full reveal">
+        <div class="team-card-header">
+          <div class="team-card-title">
+            <span class="team-emoji"><img src="assets/icons/fire.svg" alt="Fire"></span>
+            <div><h3>Tri-Force Elite</h3><span class="team-type-badge">Ironman</span></div>
+          </div>
+          <div class="team-card-stats">
+            <div class="tcs"><span class="tcs-val">4</span><span class="tcs-lbl">Atletas</span></div>
+            <div class="tcs"><span class="tcs-val">1240h</span><span class="tcs-lbl">Treino Total</span></div>
+            <div class="tcs"><span class="tcs-val">285W</span><span class="tcs-lbl">FTP Médio</span></div>
+          </div>
+        </div>
+        <div class="team-athletes-grid">
+          <div class="team-athlete-card">
+            <div class="ta-avatar" style="background: linear-gradient(135deg, #00d4ff, #7c3aed)">MS</div>
+            <div class="ta-name">Miguel Santos</div>
+            <div class="ta-role">Capitão</div>
+            <div class="ta-stats-row">
+              <div class="ta-stat"><span class="ta-val">285W</span><span class="ta-lbl">FTP</span></div>
+              <div class="ta-stat"><span class="ta-val">52</span><span class="ta-lbl">VO2</span></div>
+              <div class="ta-stat"><span class="ta-val">3:45</span><span class="ta-lbl">Pace</span></div>
+            </div>
+            <div class="ta-zone-mini"><span class="tz z1" style="flex:1"></span><span class="tz z2" style="flex:3"></span><span class="tz z3" style="flex:2"></span><span class="tz z4" style="flex:1.5"></span><span class="tz z5" style="flex:0.5"></span></div>
+          </div>
+          <div class="team-athlete-card">
+            <div class="ta-avatar" style="background: linear-gradient(135deg, #22c55e, #00d4ff)">AC</div>
+            <div class="ta-name">Ana Costa</div>
+            <div class="ta-role">Sprint Specialist</div>
+            <div class="ta-stats-row">
+              <div class="ta-stat"><span class="ta-val">210W</span><span class="ta-lbl">FTP</span></div>
+              <div class="ta-stat"><span class="ta-val">48</span><span class="ta-lbl">VO2</span></div>
+              <div class="ta-stat"><span class="ta-val">4:10</span><span class="ta-lbl">Pace</span></div>
+            </div>
+            <div class="ta-zone-mini"><span class="tz z1" style="flex:1.5"></span><span class="tz z2" style="flex:2.5"></span><span class="tz z3" style="flex:2"></span><span class="tz z4" style="flex:1"></span><span class="tz z5" style="flex:1"></span></div>
+          </div>
+          <div class="team-athlete-card">
+            <div class="ta-avatar" style="background: linear-gradient(135deg, #f97316, #ef4444)">RF</div>
+            <div class="ta-name">Rui Ferreira</div>
+            <div class="ta-role">Endurance</div>
+            <div class="ta-stats-row">
+              <div class="ta-stat"><span class="ta-val">260W</span><span class="ta-lbl">FTP</span></div>
+              <div class="ta-stat"><span class="ta-val">55</span><span class="ta-lbl">VO2</span></div>
+              <div class="ta-stat"><span class="ta-val">3:38</span><span class="ta-lbl">Pace</span></div>
+            </div>
+            <div class="ta-zone-mini"><span class="tz z1" style="flex:2"></span><span class="tz z2" style="flex:3.5"></span><span class="tz z3" style="flex:1.5"></span><span class="tz z4" style="flex:1"></span><span class="tz z5" style="flex:0.3"></span></div>
+          </div>
+          <div class="team-athlete-card">
+            <div class="ta-avatar" style="background: linear-gradient(135deg, #7c3aed, #ec4899)">SP</div>
+            <div class="ta-name">Sofia Pinto</div>
+            <div class="ta-role">All-round</div>
+            <div class="ta-stats-row">
+              <div class="ta-stat"><span class="ta-val">195W</span><span class="ta-lbl">FTP</span></div>
+              <div class="ta-stat"><span class="ta-val">46</span><span class="ta-lbl">VO2</span></div>
+              <div class="ta-stat"><span class="ta-val">4:25</span><span class="ta-lbl">Pace</span></div>
+            </div>
+            <div class="ta-zone-mini"><span class="tz z1" style="flex:1"></span><span class="tz z2" style="flex:2"></span><span class="tz z3" style="flex:3"></span><span class="tz z4" style="flex:1.5"></span><span class="tz z5" style="flex:0.8"></span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TEAM 2 -->
+      <div class="team-card-full reveal">
+        <div class="team-card-header">
+          <div class="team-card-title">
+            <span class="team-emoji"><img src="assets/icons/lightning.svg" alt="Lightning"></span>
+            <div><h3>Speed Demons</h3><span class="team-type-badge">Sprint</span></div>
+          </div>
+          <div class="team-card-stats">
+            <div class="tcs"><span class="tcs-val">3</span><span class="tcs-lbl">Atletas</span></div>
+            <div class="tcs"><span class="tcs-val">890h</span><span class="tcs-lbl">Treino Total</span></div>
+            <div class="tcs"><span class="tcs-val">245W</span><span class="tcs-lbl">FTP Médio</span></div>
+          </div>
+        </div>
+        <div class="team-athletes-grid">
+          <div class="team-athlete-card">
+            <div class="ta-avatar" style="background: linear-gradient(135deg, #eab308, #f97316)">TM</div>
+            <div class="ta-name">Tiago Martins</div>
+            <div class="ta-role">Capitão</div>
+            <div class="ta-stats-row">
+              <div class="ta-stat"><span class="ta-val">270W</span><span class="ta-lbl">FTP</span></div>
+              <div class="ta-stat"><span class="ta-val">50</span><span class="ta-lbl">VO2</span></div>
+              <div class="ta-stat"><span class="ta-val">3:50</span><span class="ta-lbl">Pace</span></div>
+            </div>
+            <div class="ta-zone-mini"><span class="tz z1" style="flex:0.5"></span><span class="tz z2" style="flex:1.5"></span><span class="tz z3" style="flex:2"></span><span class="tz z4" style="flex:3"></span><span class="tz z5" style="flex:1.5"></span></div>
+          </div>
+          <div class="team-athlete-card">
+            <div class="ta-avatar" style="background: linear-gradient(135deg, #3b82f6, #22c55e)">IL</div>
+            <div class="ta-name">Inês Lima</div>
+            <div class="ta-role">Velocista</div>
+            <div class="ta-stats-row">
+              <div class="ta-stat"><span class="ta-val">220W</span><span class="ta-lbl">FTP</span></div>
+              <div class="ta-stat"><span class="ta-val">47</span><span class="ta-lbl">VO2</span></div>
+              <div class="ta-stat"><span class="ta-val">4:05</span><span class="ta-lbl">Pace</span></div>
+            </div>
+            <div class="ta-zone-mini"><span class="tz z1" style="flex:0.8"></span><span class="tz z2" style="flex:2"></span><span class="tz z3" style="flex:2.5"></span><span class="tz z4" style="flex:2"></span><span class="tz z5" style="flex:1"></span></div>
+          </div>
+          <div class="team-athlete-card">
+            <div class="ta-avatar" style="background: linear-gradient(135deg, #ef4444, #7c3aed)">PA</div>
+            <div class="ta-name">Pedro Almeida</div>
+            <div class="ta-role">Power</div>
+            <div class="ta-stats-row">
+              <div class="ta-stat"><span class="ta-val">245W</span><span class="ta-lbl">FTP</span></div>
+              <div class="ta-stat"><span class="ta-val">51</span><span class="ta-lbl">VO2</span></div>
+              <div class="ta-stat"><span class="ta-val">3:55</span><span class="ta-lbl">Pace</span></div>
+            </div>
+            <div class="ta-zone-mini"><span class="tz z1" style="flex:0.5"></span><span class="tz z2" style="flex:1"></span><span class="tz z3" style="flex:2"></span><span class="tz z4" style="flex:3"></span><span class="tz z5" style="flex:2"></span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand"><div class="logo">iTX</div><p>Plataforma de análise biométrica para triatletas.</p></div>
+      <div class="footer-col"><h4>Produto</h4><ul><li><a href="dashboard.html">Dashboard</a></li><li><a href="teams.html">Equipas</a></li><li><a href="download.html">Download</a></li></ul></div>
+      <div class="footer-col"><h4>Empresa</h4><ul><li><a href="#">Sobre Nós</a></li><li><a href="#">Contacto</a></li></ul></div>
+      <div class="footer-col"><h4>Legal</h4><ul><li><a href="#">Privacidade</a></li><li><a href="#">Termos</a></li></ul></div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 iTX. Todos os direitos reservados.</span>
+      <div class="footer-social">
+        <a href="#"><img src="assets/icons/camera.svg" alt="Instagram"></a>
+        <a href="#"><img src="assets/icons/twitter.svg" alt="Twitter"></a>
+        <a href="#"><img src="assets/icons/linkedin.svg" alt="LinkedIn"></a>
+      </div>
+    </div>
+  </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

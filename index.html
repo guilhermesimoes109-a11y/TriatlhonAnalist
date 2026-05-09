@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>iTX — Analisador Biométrico para Triatletas</title>
+  <meta name="description" content="iTX é a app de análise biométrica para triatletas. Importa dados do Strava, analisa zonas de treino Z1-Z5 e gere a tua equipa."/>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar" id="navbar">
+  <div class="container">
+    <a href="index.html" class="nav-logo">iTX</a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="dashboard.html">Dashboard</a></li>
+      <li><a href="teams.html">Equipas</a></li>
+      <li><a href="download.html">Download</a></li>
+    </ul>
+    <a href="download.html" class="nav-cta">Download App</a>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+  <canvas id="hero-canvas"></canvas>
+  <div class="hero-glow hero-glow-1"></div>
+  <div class="hero-glow hero-glow-2"></div>
+  <div class="hero-content">
+    <div class="hero-badge"><span class="dot"></span> Novo — Versão 2.0 disponível</div>
+    <h1>Analisa. Otimiza.<br/><span class="gradient">Domina o Triathlon.</span></h1>
+    <p>A plataforma de análise biométrica que importa os teus dados do Strava, analisa as tuas zonas de treino e leva a tua performance ao próximo nível.</p>
+    <div class="hero-buttons">
+      <a href="download.html" class="btn-primary">⬇ Download Grátis</a>
+      <a href="dashboard.html" class="btn-secondary">Ver Dashboard →</a>
+    </div>
+    <div class="hero-stats">
+      <div class="hero-stat"><div class="number" data-target="12500">0</div><div class="label">Atletas Ativos</div></div>
+      <div class="hero-stat"><div class="number" data-target="850">0</div><div class="label">Equipas Criadas</div></div>
+      <div class="hero-stat"><div class="number" data-target="2400000">0</div><div class="label">Treinos Analisados</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section id="features" class="section-padded">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag">Features</span>
+      <h2>Tudo o que precisas para <span class="gradient">dominar</span></h2>
+      <p>Ferramentas avançadas de análise biométrica desenhadas para triatletas ambiciosos.</p>
+    </div>
+    <div class="features-grid">
+      <div class="feature-card large reveal">
+        <div class="feature-icon"><img src="assets/icons/chart.svg" alt="Zonas"></div>
+        <h3>Zonas de Treino Z1–Z5</h3>
+        <p>Análise detalhada das tuas zonas de frequência cardíaca e potência. Visualiza a distribuição do esforço em cada treino.</p>
+        <div class="zone-bars">
+          <div class="zone-bar z1"><span>Z1</span></div>
+          <div class="zone-bar z2"><span>Z2</span></div>
+          <div class="zone-bar z3"><span>Z3</span></div>
+          <div class="zone-bar z4"><span>Z4</span></div>
+          <div class="zone-bar z5"><span>Z5</span></div>
+        </div>
+      </div>
+      <div class="feature-card reveal">
+        <div class="feature-icon"><img src="assets/icons/sync.svg" alt="Import"></div>
+        <h3>Importação Strava</h3>
+        <p>Sincroniza automaticamente todos os teus treinos do Strava, Garmin e outras plataformas.</p>
+      </div>
+      <div class="feature-card reveal">
+        <div class="feature-icon"><img src="assets/icons/multisport.svg" alt="Multi-Desporto"></div>
+        <h3>Multi-Desporto</h3>
+        <p>Análise especializada para natação, ciclismo e corrida com métricas específicas.</p>
+      </div>
+      <div class="feature-card reveal">
+        <div class="feature-icon"><img src="assets/icons/team.svg" alt="Equipas"></div>
+        <h3>Gestão de Equipas</h3>
+        <p>Cria e gere equipas de triathlon. Acompanha o progresso de cada atleta em tempo real.</p>
+      </div>
+      <div class="feature-card large reveal">
+        <div class="feature-icon"><img src="assets/icons/brain.svg" alt="IA"></div>
+        <h3>Insights com IA</h3>
+        <p>Algoritmos inteligentes que analisam padrões de treino e sugerem ajustes para maximizar a tua performance.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INTEGRATIONS -->
+<section id="integrations" class="section-padded">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag">Integrações</span>
+      <h2>Conecta <span class="gradient">tudo</span></h2>
+      <p>Sincroniza os teus dados de todas as plataformas favoritas.</p>
+    </div>
+    <div class="integrations-track reveal">
+      <div class="integration-card"><div class="logo"><img src="assets/icons/strava-official.svg" alt="Strava"></div><div class="name">Strava</div></div>
+      <div class="integration-card"><div class="logo"><img src="assets/icons/garmin-official.svg" alt="Garmin"></div><div class="name">Garmin</div></div>
+      <div class="integration-card"><div class="logo"><img src="assets/icons/trainingpeaks-official.svg" alt="TrainingPeaks"></div><div class="name">TrainingPeaks</div></div>
+      <div class="integration-card"><div class="logo"><img src="assets/icons/zwift-official.svg" alt="Zwift"></div><div class="name">Zwift</div></div>
+      <div class="integration-card"><div class="logo"><img src="assets/icons/health-official.svg" alt="Apple Health"></div><div class="name">Apple Health</div></div>
+      <div class="integration-card"><div class="logo"><img src="assets/icons/wahoo-official.svg" alt="Wahoo"></div><div class="name">Wahoo</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials" class="section-padded">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag">Testemunhos</span>
+      <h2>O que dizem os <span class="gradient">atletas</span></h2>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testimonial-card reveal">
+        <div class="stars"><img src="assets/icons/star.svg"><img src="assets/icons/star.svg"><img src="assets/icons/star.svg"><img src="assets/icons/star.svg"><img src="assets/icons/star.svg"></div>
+        <p class="quote">"O iTX mudou completamente a forma como analiso os meus treinos. As zonas Z1-Z5 dão-me uma visão clara do esforço."</p>
+        <div class="testimonial-author"><div class="avatar">JP</div><div class="info"><div class="name">João Pereira</div><div class="title">Ironman Finisher · Porto</div></div></div>
+      </div>
+      <div class="testimonial-card reveal">
+        <div class="stars"><img src="assets/icons/star.svg"><img src="assets/icons/star.svg"><img src="assets/icons/star.svg"><img src="assets/icons/star.svg"><img src="assets/icons/star.svg"></div>
+        <p class="quote">"A integração com o Strava é perfeita. Todos os meus dados aparecem automaticamente e a análise é precisa."</p>
+        <div class="testimonial-author"><div class="avatar">CM</div><div class="info"><div class="name">Catarina Mendes</div><div class="title">Triatleta Olympic · Lisboa</div></div></div>
+      </div>
+      <div class="testimonial-card reveal">
+        <div class="stars"><img src="assets/icons/star.svg"><img src="assets/icons/star.svg"><img src="assets/icons/star.svg"><img src="assets/icons/star.svg"><img src="assets/icons/star.svg"></div>
+        <p class="quote">"Uso o iTX para gerir a minha equipa de 15 atletas. O dashboard de equipa é fantástico."</p>
+        <div class="testimonial-author"><div class="avatar">DA</div><div class="info"><div class="name">Daniel Alves</div><div class="title">Coach · Tri-Team Algarve</div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="cta-section">
+  <div class="cta-glow"></div>
+  <div class="container">
+    <div class="cta-content reveal">
+      <h2>Pronto para dominar<br/>o <span class="gradient">triathlon</span>?</h2>
+      <p>Faz download grátis e começa a analisar a tua performance hoje.</p>
+      <div class="hero-buttons">
+        <a href="download.html" class="btn-primary">⬇ Download Grátis</a>
+        <a href="dashboard.html" class="btn-secondary">Explorar Dashboard →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo">iTX</div>
+        <p>Plataforma de análise biométrica para triatletas. Analisa, otimiza e domina cada treino.</p>
+      </div>
+      <div class="footer-col"><h4>Produto</h4><ul><li><a href="dashboard.html">Dashboard</a></li><li><a href="teams.html">Equipas</a></li><li><a href="download.html">Download</a></li></ul></div>
+      <div class="footer-col"><h4>Empresa</h4><ul><li><a href="#">Sobre Nós</a></li><li><a href="#">Blog</a></li><li><a href="#">Contacto</a></li></ul></div>
+      <div class="footer-col"><h4>Legal</h4><ul><li><a href="#">Privacidade</a></li><li><a href="#">Termos</a></li><li><a href="#">Cookies</a></li></ul></div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 iTX. Todos os direitos reservados.</span>
+      <div class="footer-social">
+        <a href="#"><img src="assets/icons/camera.svg" alt="Instagram"></a>
+        <a href="#"><img src="assets/icons/twitter.svg" alt="Twitter"></a>
+        <a href="#"><img src="assets/icons/linkedin.svg" alt="LinkedIn"></a>
+        <a href="#"><img src="assets/icons/youtube.svg" alt="YouTube"></a>
+      </div>
+    </div>
+  </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

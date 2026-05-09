@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>iTX — Download</title>
+  <meta name="description" content="Faz download do iTX para iOS, Android ou Desktop. Começa a analisar a tua performance de triathlon hoje."/>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+
+<nav class="navbar scrolled" id="navbar">
+  <div class="container">
+    <a href="index.html" class="nav-logo">iTX</a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="dashboard.html">Dashboard</a></li>
+      <li><a href="teams.html">Equipas</a></li>
+      <li><a href="download.html" class="active">Download</a></li>
+    </ul>
+    <a href="download.html" class="nav-cta">Download App</a>
+    <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<section class="page-hero download-hero">
+  <div class="hero-glow hero-glow-1"></div>
+  <div class="hero-glow hero-glow-2"></div>
+  <div class="container">
+    <div class="page-hero-content" style="text-align:center; max-width:700px; margin:0 auto;">
+      <span class="section-tag">Download</span>
+      <h1>Começa agora.<br/><span class="gradient">É grátis.</span></h1>
+      <p>Faz download do iTX e transforma os teus dados de treino em insights poderosos.</p>
+      <div class="download-buttons" style="margin-top:36px;">
+        <div class="store-btn"><span class="icon"><img src="assets/icons/apple.svg" alt="Apple"></span><div class="text"><div class="small">Download na</div><div class="big">App Store</div></div></div>
+        <div class="store-btn"><span class="icon"><img src="assets/icons/android.svg" alt="Android"></span><div class="text"><div class="small">Disponível no</div><div class="big">Google Play</div></div></div>
+        <div class="store-btn"><span class="icon"><img src="assets/icons/desktop.svg" alt="Desktop"></span><div class="text"><div class="small">Download para</div><div class="big">Desktop</div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-padded">
+  <div class="container">
+    <div class="download-stats-bar reveal">
+      <div class="dsb-item"><div class="dsb-val" data-target="12500">0</div><div class="dsb-lbl">Atletas Ativos</div></div>
+      <div class="dsb-sep"></div>
+      <div class="dsb-item"><div class="dsb-val" data-target="98">0</div><div class="dsb-lbl">% Satisfação</div></div>
+      <div class="dsb-sep"></div>
+      <div class="dsb-item"><div class="dsb-val" data-target="45">0</div><div class="dsb-lbl">Países</div></div>
+      <div class="dsb-sep"></div>
+      <div class="dsb-item"><div class="dsb-val" data-target="2400000">0</div><div class="dsb-lbl">Treinos Analisados</div></div>
+    </div>
+
+    <!-- SYSTEM REQUIREMENTS -->
+    <div class="section-header reveal" style="margin-top:60px;">
+      <h2>Requisitos do <span class="gradient">Sistema</span></h2>
+    </div>
+    <div class="req-grid">
+      <div class="req-card reveal">
+        <div class="req-icon"><img src="assets/icons/apple.svg" alt="Apple"></div>
+        <h3>iOS</h3>
+        <ul class="req-list">
+          <li>iOS 15.0 ou superior</li>
+          <li>iPhone 8 ou mais recente</li>
+          <li>120 MB de espaço</li>
+          <li>Conexão à internet</li>
+        </ul>
+      </div>
+      <div class="req-card reveal">
+        <div class="req-icon"><img src="assets/icons/android.svg" alt="Android"></div>
+        <h3>Android</h3>
+        <ul class="req-list">
+          <li>Android 10.0 ou superior</li>
+          <li>4 GB de RAM mínimo</li>
+          <li>150 MB de espaço</li>
+          <li>Conexão à internet</li>
+        </ul>
+      </div>
+      <div class="req-card reveal">
+        <div class="req-icon"><img src="assets/icons/desktop.svg" alt="Desktop"></div>
+        <h3>Desktop</h3>
+        <ul class="req-list">
+          <li>Windows 10+ / macOS 12+</li>
+          <li>8 GB de RAM mínimo</li>
+          <li>250 MB de espaço</li>
+          <li>Conexão à internet</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- FAQ -->
+    <div class="section-header reveal" style="margin-top:80px;">
+      <h2>Perguntas <span class="gradient">Frequentes</span></h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item reveal">
+        <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+          <span>O iTX é mesmo grátis?</span><span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer"><p>Sim! O iTX oferece um plano gratuito com todas as funcionalidades base. Para equipas e análise avançada com IA, oferecemos planos Pro a partir de €9.99/mês.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+          <span>Como importo os meus dados do Strava?</span><span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer"><p>Basta conectar a tua conta Strava nas definições da app. Todos os treinos passados e futuros serão sincronizados automaticamente.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+          <span>As zonas Z1-Z5 são personalizáveis?</span><span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer"><p>Sim! Podes definir as tuas zonas de treino com base na frequência cardíaca máxima, FTP ou limiar de lactato. Também importamos as zonas configuradas no Strava.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+          <span>Quantos atletas posso ter numa equipa?</span><span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer"><p>No plano gratuito podes ter até 5 atletas por equipa. No plano Pro, não há limite de atletas.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+          <span>Os meus dados estão seguros?</span><span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer"><p>Absolutamente. Utilizamos encriptação end-to-end e seguimos as normas RGPD. Os teus dados nunca são partilhados com terceiros.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand"><div class="logo">iTX</div><p>Plataforma de análise biométrica para triatletas.</p></div>
+      <div class="footer-col"><h4>Produto</h4><ul><li><a href="dashboard.html">Dashboard</a></li><li><a href="teams.html">Equipas</a></li><li><a href="download.html">Download</a></li></ul></div>
+      <div class="footer-col"><h4>Empresa</h4><ul><li><a href="#">Sobre Nós</a></li><li><a href="#">Contacto</a></li></ul></div>
+      <div class="footer-col"><h4>Legal</h4><ul><li><a href="#">Privacidade</a></li><li><a href="#">Termos</a></li></ul></div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 iTX. Todos os direitos reservados.</span>
+      <div class="footer-social">
+        <a href="#"><img src="assets/icons/camera.svg" alt="Instagram"></a>
+        <a href="#"><img src="assets/icons/twitter.svg" alt="Twitter"></a>
+        <a href="#"><img src="assets/icons/linkedin.svg" alt="LinkedIn"></a>
+      </div>
+    </div>
+  </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

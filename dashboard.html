@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>iTX — Dashboard de Performance</title>
+  <meta name="description" content="Dashboard interativo com zonas de treino Z1-Z5, métricas de performance e análise multi-desporto para triatletas."/>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar scrolled" id="navbar">
+  <div class="container">
+    <a href="index.html" class="nav-logo">iTX</a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="dashboard.html" class="active">Dashboard</a></li>
+      <li><a href="teams.html">Equipas</a></li>
+      <li><a href="download.html">Download</a></li>
+    </ul>
+    <a href="download.html" class="nav-cta">Download App</a>
+    <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<!-- PAGE HEADER -->
+<section class="page-hero">
+  <div class="hero-glow hero-glow-1"></div>
+  <div class="container">
+    <div class="page-hero-content">
+      <span class="section-tag">Dashboard</span>
+      <h1>A tua performance<br/><span class="gradient">em detalhe</span></h1>
+      <p>Analisa zonas de treino, métricas chave e acompanha a tua evolução semana a semana.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SPORT TABS -->
+<section class="section-padded" style="padding-top:40px">
+  <div class="container">
+    <div class="sport-tabs reveal">
+      <button class="sport-tab active" data-sport="cycling"><img src="assets/icons/bike.svg" class="ui-icon" style="margin-right:6px;width:16px;"> Ciclismo</button>
+      <button class="sport-tab" data-sport="running"><img src="assets/icons/run.svg" class="ui-icon" style="margin-right:6px;width:16px;"> Corrida</button>
+      <button class="sport-tab" data-sport="swimming"><img src="assets/icons/swim.svg" class="ui-icon" style="margin-right:6px;width:16px;"> Natação</button>
+    </div>
+
+    <!-- MAIN DASHBOARD -->
+    <div class="dashboard reveal">
+      <div class="dash-grid">
+        <!-- ZONES CHART -->
+        <div class="dash-card">
+          <h4>Distribuição por Zonas</h4>
+          <div class="zones-chart" id="zonesChart">
+            <div class="zone-col"><div class="zone-fill z1" data-pct="18%" style="height:0"></div><span class="zone-label">Z1</span></div>
+            <div class="zone-col"><div class="zone-fill z2" data-pct="32%" style="height:0"></div><span class="zone-label">Z2</span></div>
+            <div class="zone-col"><div class="zone-fill z3" data-pct="25%" style="height:0"></div><span class="zone-label">Z3</span></div>
+            <div class="zone-col"><div class="zone-fill z4" data-pct="16%" style="height:0"></div><span class="zone-label">Z4</span></div>
+            <div class="zone-col"><div class="zone-fill z5" data-pct="9%" style="height:0"></div><span class="zone-label">Z5</span></div>
+          </div>
+        </div>
+
+        <!-- KEY METRICS -->
+        <div class="dash-card">
+          <h4>Métricas Chave</h4>
+          <div class="metrics-grid">
+            <div class="metric"><div class="val" id="metricHR">0</div><div class="lbl">FC Média (bpm)</div></div>
+            <div class="metric"><div class="val" id="metricPower">0</div><div class="lbl">Potência (W)</div></div>
+            <div class="metric"><div class="val" id="metricTSS">0</div><div class="lbl">TSS</div></div>
+            <div class="metric"><div class="val" id="metricPace">0:00</div><div class="lbl">Pace (/km)</div></div>
+          </div>
+        </div>
+
+        <!-- DONUT CHART -->
+        <div class="dash-card">
+          <h4>Tipo de Atividade</h4>
+          <div class="donut-wrap">
+            <div class="donut-chart">
+              <svg viewBox="0 0 120 120">
+                <circle cx="60" cy="60" r="50" stroke="rgba(255,255,255,0.05)" stroke-width="14" fill="none"/>
+                <circle id="donutSwim" cx="60" cy="60" r="50" stroke="#FFFFFF" stroke-width="14" fill="none" stroke-dasharray="314" stroke-dashoffset="314" stroke-linecap="round"/>
+                <circle id="donutBike" cx="60" cy="60" r="50" stroke="#FFCC00" stroke-width="14" fill="none" stroke-dasharray="314" stroke-dashoffset="314" stroke-linecap="round"/>
+                <circle id="donutRun" cx="60" cy="60" r="50" stroke="#666666" stroke-width="14" fill="none" stroke-dasharray="314" stroke-dashoffset="314" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div class="donut-legend">
+              <div class="legend-item"><span class="legend-dot" style="background:#FFFFFF"></span> Natação 25%</div>
+              <div class="legend-item"><span class="legend-dot" style="background:#FFCC00"></span> Ciclismo 45%</div>
+              <div class="legend-item"><span class="legend-dot" style="background:#666666"></span> Corrida 30%</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- WEEKLY CHART -->
+        <div class="dash-card">
+          <h4>Volume Semanal</h4>
+          <div class="weekly-chart" id="weeklyChart">
+            <div class="week-bar" data-day="Seg" style="height:0"></div>
+            <div class="week-bar" data-day="Ter" style="height:0"></div>
+            <div class="week-bar" data-day="Qua" style="height:0"></div>
+            <div class="week-bar" data-day="Qui" style="height:0"></div>
+            <div class="week-bar" data-day="Sex" style="height:0"></div>
+            <div class="week-bar" data-day="Sáb" style="height:0"></div>
+            <div class="week-bar" data-day="Dom" style="height:0"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ZONE DETAILS CARDS -->
+    <div class="zone-details-grid" style="margin-top: 32px;">
+      <div class="zone-detail-card reveal" style="--zone-color: var(--z1)">
+        <div class="zone-detail-header"><span class="zone-number">Z1</span><span class="zone-title">Recuperação</span></div>
+        <div class="zone-detail-range">50–60% FC Máx</div>
+        <div class="zone-detail-desc">Intensidade muito baixa. Ideal para aquecimento, retorno à calma e recuperação ativa entre sessões.</div>
+        <div class="zone-detail-bar"><div class="zone-detail-fill" style="width:18%; background: var(--z1)"></div></div>
+        <div class="zone-detail-time">18% · ~32 min</div>
+      </div>
+      <div class="zone-detail-card reveal" style="--zone-color: var(--z2)">
+        <div class="zone-detail-header"><span class="zone-number">Z2</span><span class="zone-title">Base Aeróbia</span></div>
+        <div class="zone-detail-range">60–70% FC Máx</div>
+        <div class="zone-detail-desc">Construção de resistência fundamental. A base de qualquer plano de triathlon sólido.</div>
+        <div class="zone-detail-bar"><div class="zone-detail-fill" style="width:32%; background: var(--z2)"></div></div>
+        <div class="zone-detail-time">32% · ~58 min</div>
+      </div>
+      <div class="zone-detail-card reveal" style="--zone-color: var(--z3)">
+        <div class="zone-detail-header"><span class="zone-number">Z3</span><span class="zone-title">Tempo</span></div>
+        <div class="zone-detail-range">70–80% FC Máx</div>
+        <div class="zone-detail-desc">Intensidade moderada-alta. Melhora o limiar aeróbio e a eficiência muscular.</div>
+        <div class="zone-detail-bar"><div class="zone-detail-fill" style="width:25%; background: var(--z3)"></div></div>
+        <div class="zone-detail-time">25% · ~45 min</div>
+      </div>
+      <div class="zone-detail-card reveal" style="--zone-color: var(--z4)">
+        <div class="zone-detail-header"><span class="zone-number">Z4</span><span class="zone-title">Limiar</span></div>
+        <div class="zone-detail-range">80–90% FC Máx</div>
+        <div class="zone-detail-desc">Intensidade alta no limiar anaeróbio. Treino de intervalos e ritmo de competição.</div>
+        <div class="zone-detail-bar"><div class="zone-detail-fill" style="width:16%; background: var(--z4)"></div></div>
+        <div class="zone-detail-time">16% · ~29 min</div>
+      </div>
+      <div class="zone-detail-card reveal" style="--zone-color: var(--z5)">
+        <div class="zone-detail-header"><span class="zone-number">Z5</span><span class="zone-title">VO2 Máx</span></div>
+        <div class="zone-detail-range">90–100% FC Máx</div>
+        <div class="zone-detail-desc">Esforço máximo. Intervalos curtos e explosivos para aumentar o VO2 máximo.</div>
+        <div class="zone-detail-bar"><div class="zone-detail-fill" style="width:9%; background: var(--z5)"></div></div>
+        <div class="zone-detail-time">9% · ~16 min</div>
+      </div>
+    </div>
+
+    <!-- RECENT ACTIVITIES -->
+    <div class="dash-card" style="margin-top: 32px;">
+      <h4>Atividades Recentes</h4>
+      <div class="activity-list">
+        <div class="activity-row reveal">
+          <div class="activity-icon" style="background: rgba(255,204,0,0.15);"><img src="assets/icons/bike.svg" alt="Bike"></div>
+          <div class="activity-info"><div class="activity-name">Treino de Base — Ciclismo</div><div class="activity-date">Hoje · 2h15min · 62km</div></div>
+          <div class="activity-zones"><span class="az z1"></span><span class="az z2" style="flex:3"></span><span class="az z3" style="flex:1.5"></span><span class="az z4" style="flex:0.5"></span></div>
+          <div class="activity-tss">TSS 145</div>
+        </div>
+        <div class="activity-row reveal">
+          <div class="activity-icon" style="background: rgba(102,102,102,0.15);"><img src="assets/icons/run.svg" alt="Run"></div>
+          <div class="activity-info"><div class="activity-name">Intervalos 5x1000m</div><div class="activity-date">Ontem · 55min · 12km</div></div>
+          <div class="activity-zones"><span class="az z1" style="flex:0.5"></span><span class="az z2"></span><span class="az z3" style="flex:1.5"></span><span class="az z4" style="flex:2"></span><span class="az z5" style="flex:1"></span></div>
+          <div class="activity-tss">TSS 98</div>
+        </div>
+        <div class="activity-row reveal">
+          <div class="activity-icon" style="background: rgba(255,255,255,0.15);"><img src="assets/icons/swim.svg" alt="Swim"></div>
+          <div class="activity-info"><div class="activity-name">Técnica + Séries</div><div class="activity-date">Há 2 dias · 1h10min · 3200m</div></div>
+          <div class="activity-zones"><span class="az z1" style="flex:1.5"></span><span class="az z2" style="flex:2"></span><span class="az z3" style="flex:2"></span><span class="az z4"></span></div>
+          <div class="activity-tss">TSS 72</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand"><div class="logo">iTX</div><p>Plataforma de análise biométrica para triatletas.</p></div>
+      <div class="footer-col"><h4>Produto</h4><ul><li><a href="dashboard.html">Dashboard</a></li><li><a href="teams.html">Equipas</a></li><li><a href="download.html">Download</a></li></ul></div>
+      <div class="footer-col"><h4>Empresa</h4><ul><li><a href="#">Sobre Nós</a></li><li><a href="#">Blog</a></li><li><a href="#">Contacto</a></li></ul></div>
+      <div class="footer-col"><h4>Legal</h4><ul><li><a href="#">Privacidade</a></li><li><a href="#">Termos</a></li></ul></div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 iTX. Todos os direitos reservados.</span>
+      <div class="footer-social">
+        <a href="#"><img src="assets/icons/camera.svg" alt="Instagram"></a>
+        <a href="#"><img src="assets/icons/twitter.svg" alt="Twitter"></a>
+        <a href="#"><img src="assets/icons/linkedin.svg" alt="LinkedIn"></a>
+      </div>
+    </div>
+  </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
