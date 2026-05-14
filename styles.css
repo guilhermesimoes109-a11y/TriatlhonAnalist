@@ -56,6 +56,15 @@ a:hover { color: var(--accent); }
   border-bottom: 1px solid var(--glass-border);
   padding: 10px 0;
 }
+.minha-imagem {
+  filter: grayscale(100%); /* Deixa a imagem em preto e branco */
+  transition: filter 0.3s ease; /* Transição suave se quiser hover */
+}
+
+/* Opcional: efeito ao passar o mouse */
+.minha-imagem:hover {
+  filter: grayscale(0%); /* Volta à cor original */
+}
 .navbar .container {
   display: flex; justify-content: space-between; align-items: center;
 }
@@ -723,7 +732,10 @@ section { padding: 100px 0; position: relative; }
   .zone-details-grid { grid-template-columns: 1fr; }
   .team-card-stats { gap: 12px; }
 }
-/ *   C L I C K   A N I M A T I O N S   * /  
- . b t n - p r i m a r y : a c t i v e ,   . b t n - s e c o n d a r y : a c t i v e ,   . n a v - c t a : a c t i v e ,   . s t o r e - b t n : a c t i v e ,   . s p o r t - t a b : a c t i v e   {   t r a n s f o r m :   s c a l e ( 0 . 9 5 ) ;   t r a n s i t i o n :   t r a n s f o r m   0 . 1 s   e a s e ;   }  
- . i n t e g r a t i o n - c a r d : a c t i v e ,   . f e a t u r e - c a r d : a c t i v e ,   . t e a m - c a r d - f u l l : a c t i v e   {   t r a n s f o r m :   s c a l e ( 0 . 9 8 ) ;   t r a n s i t i o n :   t r a n s f o r m   0 . 1 s   e a s e ;   }  
+/ *   C L I C K   A N I M A T I O N S   * / 
+ 
+ . b t n - p r i m a r y : a c t i v e ,   . b t n - s e c o n d a r y : a c t i v e ,   . n a v - c t a : a c t i v e ,   . s t o r e - b t n : a c t i v e ,   . s p o r t - t a b : a c t i v e   {   t r a n s f o r m :   s c a l e ( 0 . 9 5 ) ;   t r a n s i t i o n :   t r a n s f o r m   0 . 1 s   e a s e ;   } 
+ 
+ . i n t e g r a t i o n - c a r d : a c t i v e ,   . f e a t u r e - c a r d : a c t i v e ,   . t e a m - c a r d - f u l l : a c t i v e   {   t r a n s f o r m :   s c a l e ( 0 . 9 8 ) ;   t r a n s i t i o n :   t r a n s f o r m   0 . 1 s   e a s e ;   } 
+ 
  
