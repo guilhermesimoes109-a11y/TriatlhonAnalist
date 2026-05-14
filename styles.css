@@ -6,10 +6,12 @@
   --card: #1a1a1a;
   --card-hover: #222222;
   --border: rgba(255,255,255,0.08);
-  --primary: #FFCC00;
+  /*Cor principal*/
+  --primary: #CC0000;
   --secondary: #363636;
-  --accent: #FFE600;
-  --warning: #FFaa00;
+  /*cor principal*/
+  --accent: #8A0000;
+  --warning: #6B0000;
   --text: #e4e4e7;
   --text-muted: #999999;
   --z1: #333333;
